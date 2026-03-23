@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wprowadzanie wyników</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="top-links">
+    <a href="./index.html">← Menu Glowne</a>
+    <a href="./leaderboard.html">Leaderboard</a>
+  </div>
+
+  <div class="hero">
+    <h1>Wprowadzanie wyników</h1>
+    <p class="pill">Best-ball Netto Stableford</p>
+  </div>
+
+  <div class="score-layout">
+    <div class="score-main card">
+      <h2 id="pairTitle">Laduje...</h2>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dolek</th>
+              <th>Par</th>
+              <th>SI</th>
+              <th id="player1Header">Gracz 1</th>
+              <th id="player2Header">Gracz 2</th>
+              <th>Punkty druzynowe</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="scoreTable"></tbody>
+        </table>
+      </div>
+
+      <p id="status"></p>
+    </div>
+
+    <aside class="score-side card">
+      <h3 class="side-title">Wyniki na żywo</h3>
+      <div id="miniLeaderboard" class="mini-board">
+        <p>Laduje...</p>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<script type="module" src="./score.js"></script>
+</body>
+</html>

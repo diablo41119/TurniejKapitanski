@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <title>Panel administracyjny</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🔐 LOGIN -->
+<div id="loginScreen" class="container">
+  <div class="hero">
+    <h1>Dostęp administratora</h1>
+    <p class="pill">Wprowadź hasło</p>
+  </div>
+
+  <div class="card" style="max-width:400px; margin:0 auto;">
+    <input id="adminPassword" type="password" placeholder="Hasło" style="width:100%; margin-bottom:12px;">
+    <button id="loginBtn" style="width:100%;">Zaloguj</button>
+    <p id="loginStatus"></p>
+  </div>
+</div>
+
+<!-- ⚙️ ADMIN PANEL -->
+<div id="adminPanel" style="display:none;">
+  <div class="container">
+
+    <div class="top-links">
+      <a href="./index.html">← Strona główna</a>
+      <a href="./leaderboard.html">Wyniki</a>
+      <a href="./login.html">Wprowadzanie wyników</a>
+    </div>
+
+    <div class="hero">
+      <h1>Panel administracyjny</h1>
+      <p class="pill">Zarządzanie turniejem</p>
+    </div>
+
+    <!-- TURNIEJ -->
+    <div class="card">
+      <h2>Turniej</h2>
+      <div class="admin-grid">
+        <input id="name" placeholder="Nazwa turnieju">
+        <input id="course" placeholder="Pole golfowe">
+        <input id="date" placeholder="Data">
+      </div>
+      <div class="admin-actions">
+        <button id="saveTournament">Zapisz turniej</button>
+      </div>
+    </div>
+
+    <!-- DOŁKI -->
+    <div class="card">
+      <h2>Dołki</h2>
+      <div id="holesForm" class="holes-grid"></div>
+      <div class="admin-actions">
+        <button id="saveHoles">Zapisz dołki</button>
+      </div>
+    </div>
+
+    <!-- DODAWANIE PARY -->
+    <div class="card">
+      <h2>Dodaj parę</h2>
+      <div class="admin-grid">
+        <input id="pairName" placeholder="Nazwa pary">
+        <input id="p1" placeholder="Zawodnik 1">
+        <input id="p2" placeholder="Zawodnik 2">
+        <input id="hcp1" type="number" placeholder="HCP 1">
+        <input id="hcp2" type="number" placeholder="HCP 2">
+        <input id="code" placeholder="Kod (4 cyfry)">
+      </div>
+      <div class="admin-actions">
+        <button id="addPair">Dodaj parę</button>
+      </div>
+    </div>
+
+    <!-- STATUS -->
+    <div class="card">
+      <p id="status"></p>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="./admin.js"></script>
+</body>
+</html>

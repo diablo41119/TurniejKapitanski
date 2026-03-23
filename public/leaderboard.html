@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Leaderboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="top-links">
+    <a href="./index.html">← Home</a>
+    <a href="./login.html">Enter Score</a>
+  </div>
+
+  <div class="hero">
+    <h1>Wprowadzanie wyników</h1>
+    <p class="pill">Aktualizuje się automatycznie</p>
+  </div>
+
+  <div class="card">
+    <h2 id="tournamentTitle">Loading tournament...</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Poz</th>
+            <th>Para</th>
+            <th>Zawodnicy</th>
+            <th>Punkty</th>
+            <th>Dołki</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardBody"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="./leaderboard.js"></script>
+</body>
+</html>
